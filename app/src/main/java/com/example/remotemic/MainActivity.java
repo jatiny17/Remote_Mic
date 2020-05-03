@@ -87,11 +87,10 @@ public class MainActivity extends AppCompatActivity {
                     byte[] sData = new byte[bufferSize];
 
                     while(isRecording){
-                        recorder.read(sData, 0, bufferSize);  //isRecording = false; onStop button
+                        recorder.read(sData, 0, bufferSize); 
 
                         if (at!=null) {
                             at.play();
-                            // Write the byte array to the track
                             at.write(sData, 0, sData.length);
                         }
                     }
